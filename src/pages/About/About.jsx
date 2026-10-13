@@ -7,7 +7,6 @@ import {
   Building2,
   Award,
   MapPin,
-  CodeXml,
   Download
 } from 'lucide-react';
 
