@@ -1,0 +1,288 @@
+:root {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary: #5548ff;
+  --primary-blue: #3b82f6;
+  --gradient: linear-gradient(100deg, #5548ff, #3b82f6);
+
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-soft: #f0efff;
+  --border: #e0e7ff;
+  --input-bg: #f8fafc;
+  --shadow: 0 12px 40px rgba(49, 46, 129, 0.06);
+
+  color: var(--text-primary);
+  background: var(--bg-primary);
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --text-primary: #e2e8f0;
+  --text-secondary: #a3b2c7;
+  --bg-primary: #0b1120;
+  --bg-card: #151e30;
+  --bg-soft: #1a2340;
+  --border: #2b3852;
+  --input-bg: #101827;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+
+  color-scheme: dark;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.navbar,
+.contact-details,
+.contact-form-card,
+.contact-method,
+.project-card,
+.about-card,
+.skills-card,
+.cards {
+  transition:
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease;
+}
+
+/* Global dark background */
+
+:root[data-theme='dark'] body,
+:root[data-theme='dark'] #root,
+:root[data-theme='dark'] .main-content,
+:root[data-theme='dark'] .page-section {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .page-container {
+  background: transparent;
+}
+
+/* Navbar */
+
+:root[data-theme='dark'] .navbar,
+:root[data-theme='dark'] .navbar-links {
+  background: rgba(11, 17, 32, 0.97);
+  border-color: var(--border);
+}
+
+:root[data-theme='dark'] .navbar-logo,
+:root[data-theme='dark'] .navbar-actions,
+:root[data-theme='dark'] .navbar-menu-button {
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .navbar-menu-button {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+:root[data-theme='dark'] .nav-link {
+  color: var(--text-secondary);
+}
+
+:root[data-theme='dark'] .nav-link.active,
+:root[data-theme='dark'] .nav-link:hover {
+  color: #a5a0ff;
+}
+
+/* Home section */
+
+:root[data-theme='dark'] .home {
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .home-intro h1 {
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .home-intro h2 {
+  color: #a5a0ff;
+}
+
+:root[data-theme='dark'] .home-intro h3,
+:root[data-theme='dark'] .home-intro p {
+  color: var(--text-secondary);
+}
+
+:root[data-theme='dark'] .name-gradient {
+  background-image: linear-gradient(90deg, #a5a0ff, #60a5fa);
+  -webkit-text-fill-color: transparent;
+}
+
+:root[data-theme='dark'] .secondary-button {
+  color: #a5a0ff;
+  border-color: #8177ff;
+}
+
+:root[data-theme='dark'] .secondary-button:hover {
+  background: var(--bg-soft);
+}
+
+:root[data-theme='dark'] .profile-decoration {
+  background: linear-gradient(135deg, #292452, #1e3a5f);
+}
+
+:root[data-theme='dark'] .home-profile img {
+  border-color: var(--bg-card);
+}
+
+:root[data-theme='dark'] .profile-code {
+  color: #a5a0ff;
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+/* Home skill cards */
+
+:root[data-theme='dark'] .cards {
+  background: var(--bg-card);
+  border-color: var(--border);
+  box-shadow: var(--shadow);
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .cards h3 {
+  color: #e2e8f0;
+  opacity: 1;
+  -webkit-text-fill-color: #e2e8f0;
+}
+
+:root[data-theme='dark'] .skill-icon {
+  color: #a5a0ff;
+  opacity: 1;
+}
+
+/* About and projects */
+
+:root[data-theme='dark'] .about-card,
+:root[data-theme='dark'] .skills-card,
+:root[data-theme='dark'] .project-card {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .about-content,
+:root[data-theme='dark'] .projects-heading {
+  color: var(--text-primary);
+}
+
+/* Contact section */
+
+:root[data-theme='dark'] .contact-details {
+  background: linear-gradient(145deg, #171d38, #111c2d);
+  border-color: var(--border);
+}
+
+:root[data-theme='dark'] .contact-form-card,
+:root[data-theme='dark'] .contact-method {
+  background: var(--bg-card);
+  border-color: var(--border);
+}
+
+:root[data-theme='dark'] .contact-heading h1,
+:root[data-theme='dark'] .contact-details h2,
+:root[data-theme='dark'] .contact-form-card h2,
+:root[data-theme='dark'] .contact-method-text strong,
+:root[data-theme='dark'] .contact-note,
+:root[data-theme='dark'] .contact-field label {
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .contact-heading p,
+:root[data-theme='dark'] .contact-description,
+:root[data-theme='dark'] .contact-form-description,
+:root[data-theme='dark'] .contact-method-text > span {
+  color: var(--text-secondary);
+}
+
+:root[data-theme='dark'] .contact-field input,
+:root[data-theme='dark'] .contact-field textarea {
+  background: var(--input-bg);
+  border-color: var(--border);
+  color: var(--text-primary);
+}
+
+:root[data-theme='dark'] .contact-field input:focus,
+:root[data-theme='dark'] .contact-field textarea:focus {
+  background: var(--bg-card);
+  border-color: #8177ff;
+}
+
+:root[data-theme='dark'] .contact-field input::placeholder,
+:root[data-theme='dark'] .contact-field textarea::placeholder {
+  color: #8493aa;
+}
+
+/* Accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}
