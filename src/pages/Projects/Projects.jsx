@@ -5,6 +5,7 @@ import {
 import './Projects.css';
 import MovieImage from '../../assets/Movie-app.png';
 import VexaImage from '../../assets/Chat-app.png';
+import HabitImage from '../../assets/HabitFlow.png'
 
 const Projects = () => {
 
@@ -27,6 +28,16 @@ const Projects = () => {
             technologies: ['React.js', 'JavaScript', 'TMDB API', 'CSS'],
             liveLink: 'https://saini06vivek.github.io/Movie_Search_App_React/',
             githubLink: 'https://github.com/saini06vivek/Movie_Search_App_React',
+            category: 'Web Application'
+        },
+        {
+            title: 'Habit Tracker App',
+            description:
+                'A responsive habit tracking application to create, complete, and manage daily habits, monitor progress, and track weekly consistency with data persistence using LocalStorage.',
+            image: HabitImage,
+            technologies: ['React.js', 'JavaScript', 'CSS', 'LocalStorage', 'Vite'],
+            liveLink: 'https://habit-tracker-delta-vert.vercel.app/',
+            githubLink: 'https://github.com/saini06vivek/habit-tracker',
             category: 'Web Application'
         }
     ];
